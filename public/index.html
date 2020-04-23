@@ -2,16 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>base template</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+    <div class="auto-load-vue-components">
+      inline template
+      <br>
+      <hello-world msg="component in inline template" />
+    </div>
+
+    <hr>
+    
+    <div class="auto-load-vue-components" is="hello-world" msg="normal component">
+    </div>
+
+    <hr>
+
+    <div>place holder</div>
+    <pre>&lt;div class=&quot;auto-load-vue-components&quot; is=&quot;hello-world&quot; msg=&quot;detect inject new html&quot;&gt;&lt;/div&gt;</pre>
+
     <!-- built files will be auto injected -->
   </body>
 </html>
